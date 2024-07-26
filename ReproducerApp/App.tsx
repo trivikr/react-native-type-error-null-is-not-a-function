@@ -10,13 +10,7 @@ import {Button, SafeAreaView, useColorScheme} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-const onPress = async () => {
-  const functionToCallInFinally = null;
-  const greeting = await new Promise(resolve => {
-    resolve('Hello, world!');
-  }).finally(functionToCallInFinally);
-  console.log(greeting);
-};
+const onPress = async () => Promise.resolve('success').finally(null);
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
