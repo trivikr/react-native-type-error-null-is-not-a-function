@@ -1,4 +1,4 @@
-# React Native Reproducer
+# react-native-type-error-null-is-not-a-function
 
 Reproduction for "TypeError: null is not a function" when null is passed to finally block.
 
