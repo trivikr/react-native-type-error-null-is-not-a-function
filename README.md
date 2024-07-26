@@ -1,14 +1,37 @@
 # React Native Reproducer
 
-This is the React Native **reproducer** template. 
+Reproduction for "TypeError: null is not a function" when null is passed to finally block.
 
-You can use this template to create a minimal, complete, and reproducible project that the community can use to understand what's your problem. You can read more about the principles of a good reproducible project [here](https://stackoverflow.com/help/mcve).
+## How to reproduce
 
-This template is up to date with `react-native@latest` as you can find it on [npm](https://www.npmjs.com/package/react-native/v/latest).
+```console
+$ corepack enable
 
-## How to use this repository
+$ cd ReproducerApp
 
-1. Click on [![Use this template](https://img.shields.io/badge/-Use%20this%20template-brightgreen)](https://github.com/cortinico/reproducer-react-native/generate) button to create a new repository starting from this one.
-2. Git clone your repository locally.
-3. Edit the project to reproduce the failure you're seeing.
-4. Push your changes, so that Github Actions can run the CI.
+$ yarn
+
+$ yarn ios
+```
+
+### Observed behavior
+
+The app will show the button "Press me" as follows
+
+  <details><summary>Default load "Press Me" button</summary>
+  <p>
+
+![screenshot-press-me](./img/screenshot-press-me.png)
+
+  </p>
+  </details>
+
+On pressing the button, the Console Warning will be shown for possible unhandled promise rejection as follows
+
+  <details><summary>Console Warning</summary>
+  <p>
+
+![screenshot-warning](./img/screenshot-warning.png)
+
+  </p>
+  </details>
