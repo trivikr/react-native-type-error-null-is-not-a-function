@@ -1,13 +1,37 @@
 # react-native-type-error-null-is-not-a-function
 
-![Build](https://github.com/trivikr/react-native-type-error-null-is-not-a-function/workflows/Pre%20Merge%20Checks/badge.svg)
+Reproduction for "TypeError: null is not a function" when null is passed to finally block.
 
-This is your new React Native Reproducer project.
+## How to reproduce
 
-## Reproducer todo list
+```console
+$ corepack enable
 
-- [x] Create a new reproducer project.
-- [ ] Git clone your repository locally.
-- [ ] Edit the project to reproduce the failure you're seeing.
-- [ ] Push your changes, so that Github Actions can run the CI.
-- [ ] Make sure the repository is public and share the link with the issue you reported.
+$ cd ReproducerApp
+
+$ yarn
+
+$ yarn ios
+```
+
+### Observed behavior
+
+The app will show the button "Press me" as follows
+
+  <details><summary>Default load "Press Me" button</summary>
+  <p>
+
+![screenshot-press-me](./img/screenshot-press-me.png)
+
+  </p>
+  </details>
+
+On pressing the button, the Console Warning will be shown for possible unhandled promise rejection as follows
+
+  <details><summary>Console Warning</summary>
+  <p>
+
+![screenshot-warning](./img/screenshot-warning.png)
+
+  </p>
+  </details>
